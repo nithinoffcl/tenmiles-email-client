@@ -4,14 +4,14 @@ from httplib2 import Http
 from oauth2client import file, client, tools
 import json
 import os
-#from pymongo import MongoClient
+from pymongo import MongoClient
 
 # If modifying these scopes, delete the file token.json.
 SCOPES = 'https://www.googleapis.com/auth/gmail.modify'
 userId = 'me'
-#client = MongoClient('localhost', 27017)
-#db = client['emailDatabase']
-#collection = db['emailCollection']
+client = MongoClient('localhost', 27017)
+db = client['emailDatabase']
+collection = db['emailCollection']
 
 
 
@@ -88,7 +88,7 @@ def getMessages(userId,query,dataForEachMail,labelIds):
     for messageId in messageIds:
         setDataForEachEmail(userId,messageId,dataForEachMail)
     #print(dataForEachMail) #######
-    #collection.insert(dataForEachMail)
+    collection.insert(dataForEachMail)
 
 def setDataForEachEmail(userId,messageId,dataForEachMail):
         message = service.users().messages().get(userId=userId,id=messageId).execute()
