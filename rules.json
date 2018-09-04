@@ -1,0 +1,65 @@
+{
+  "rules" : [
+
+  {
+  "subject" : "hi there",
+  "from" : "yashwanth ravichandran <nithinoffcl@gmail.com>",
+  "labelIds" : [
+  ],
+  "action" : "addLabels",
+  "labelsToAdd" : [
+    "programming",
+    "eating",
+    "learning"
+  ]
+
+},
+{
+"subject" : "Google APIs Explorer connected to your Google Account",
+"from" : "Google <no-reply@accounts.google.com>",
+"filter" : "all",
+"labelIds" : [
+],
+"action" : "removeLabels",
+"labelsToRemove" : [
+  "programming",
+  "eating",
+  "learning"
+]
+
+
+},
+
+{
+"subject" : "None",
+"from" : [
+  "yashwanth ravichandran <nithinoffcl@gmail.com>",
+  "Google <no-reply@accounts.google.com>"
+],
+"action" : "addLabels",
+"labelsToAdd" : [
+  "programming",
+  "cooking",
+  "learning"
+]
+
+
+},
+
+{
+"subject" : "hi there",
+"from" : [
+  "yashwanth ravichandran <nithinoffcl@gmail.com>",
+  "Google <no-reply@accounts.google.com>"
+],
+"action" : "modifyMessages",
+"addLabelIds" : [
+  "UNREAD",
+  "STARRED"
+]
+
+}
+
+
+  ]
+}
