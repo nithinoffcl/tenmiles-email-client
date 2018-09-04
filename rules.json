@@ -49,8 +49,7 @@
 {
 "subject" : "hi there",
 "from" : [
-  "yashwanth ravichandran <nithinoffcl@gmail.com>",
-  "Google <no-reply@accounts.google.com>"
+  "yashwanth ravichandran <nithinoffcl@gmail.com>"
 ],
 "action" : "modifyMessages",
 "addLabelIds" : [
